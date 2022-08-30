@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab7_5</title>
+
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        function addTable(){
+            let NameCus = document.getElementById("Customer");
+            let Cus_name = NameCus.value;
+
+            let AddCus = document.getElementById("Address");
+            let Cus_Add = AddCus.value;
+
+            let PhoneCus = document.getElementById("Phone");
+            let Cus_Phone = PhoneCus.value 
+
+            let tr = document.createElement("tr")
+
+            let td = document.createElement("td")
+            td.innerHTML = Cus_name;
+
+            let td_Address = document.createElement("td")
+            td_Address.innerHTML = Cus_Add;
+
+            let td_Phone = document.createElement("td")
+            td_Phone.innerHTML = Cus_Phone;
+
+            let table = document.getElementById("Table");
+            table.appendChild(tr)
+            table.appendChild(td);
+            table.appendChild(td_Address);
+            table.appendChild(td_Phone);
+            
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="Customer">ชื่อลูกค้า :</label>
+        <input type="text" id="Customer">
+        <br>
+        <label for="Address">ที่อยู่ :</label>
+        <input type="text" id="Address">
+        <br>
+        <label for="Phone">โทรศัพท์ :</label>
+        <input type="text" id="Phone">
+        <br>
+        <input type="button" id="addButton" value="เพิ่ม" onclick="addTable()" >
+    </form>
+    <br>
+
+    <table id="Table">
+        <tr>
+            <td>ชื่อลูกค้า</td>
+            <td>ที่อยู่</td>
+            <td>โทรศัพท์</td>
+        </tr>
+
+    </table>
+</body>
+</html>
